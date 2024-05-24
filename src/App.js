@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Typography, Box, Button, IconButton } from '@mui/material';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import { styled } from '@mui/material/styles';
 import './App.css';
+
+const Input = styled('input')({
+  display: 'none',
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="fullscreen-container">
+      <Box className="upload-box">
+        <Typography variant="h4" gutterBottom>
+          Blockchain Security Audit Tool
+        </Typography>
+        <form action="/upload" method="post" encType="multipart/form-data" className="form-container">
+          <Box className="upload-area">
+            <label htmlFor="file-upload">
+              <Input id="file-upload" type="file" name="file" multiple />
+              <IconButton color="primary" component="span">
+                <CloudUploadIcon sx={{ fontSize: 50 }} />
+              </IconButton>
+              <Typography variant="body1" style={{ color: '#fff' }}>
+                Drag and drop files here
+              </Typography>
+            </label>
+          </Box>
+          <Typography variant="body2" style={{ color: '#aaa', marginBottom: '20px' }}>
+            Limit 200MB per file • .SOL
+          </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            sx={{ marginTop: '20px' }}
+          >
+            Submit
+          </Button>
+        </form>
+      </Box>
     </div>
   );
 }
