@@ -9,4 +9,4 @@ This is a React application that provides a tool for uploading Solidity contract
 - File upload form with drag and drop functionality
 - Styled using Material-UI for a consistent look and feel
 
-![Form Image](src/background.jpg)
+![Form Image](image.png)
