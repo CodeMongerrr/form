@@ -22,13 +22,13 @@ function App() {
               <IconButton color="primary" component="span">
                 <CloudUploadIcon sx={{ fontSize: 50 }} />
               </IconButton>
-              <Typography variant="body1" style={{ color: '#fff' }}>
-                Drag and drop files here
+              <Typography variant="body1" style={{ color: '#fff', marginLeft: '10px' }}>
+                Drag and drop files here or click to upload
               </Typography>
             </label>
           </Box>
           <Typography variant="body2" style={{ color: '#aaa', marginBottom: '20px' }}>
-            Limit 200MB per file • .sol / .rs
+            Limit 200MB per file • .SOL
           </Typography>
           <Button
             variant="contained"
