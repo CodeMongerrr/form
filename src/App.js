@@ -28,7 +28,7 @@ function App() {
             </label>
           </Box>
           <Typography variant="body2" style={{ color: '#aaa', marginBottom: '20px' }}>
-            Limit 200MB per file • .SOL
+            Limit 200MB per file • .sol / .rs
           </Typography>
           <Button
             variant="contained"
